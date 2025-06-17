@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meme ngẫu nhiên</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta name="description" content="Lấy meme ngẫu nhiên nhờ api phimtat.vn">
+  <link href="icon.webp" rel="icon" type="image/webp">
+</head>
+<body class="bg-zinc-900 min-h-screen flex items-center justify-center" style="background-color: #18181b;">
+  <div class="bg-zinc-800 rounded-xl p-6 text-center flex flex-col items-center gap-y-3 border-solid border-gray-700 border" style="background-color: #27272a;">
+    <div class="text-center mb-6">
+      
+      
+    </div>
+    <div class="flex justify-center mb-6" id="cap">
+      <img class="rounded-xl drop-shadow-2xl max-w-[80%] max-h-[60vh] object-cover hover:scale-150 transition" src="https://api.phimtat.vn/api/random-meme/? Meme hay ko bạn " loading="eager" alt="🤣😂🤣😂">
+    </div>
+    
+    <div class="flex justify-center">
+      <button id="nextBtn" class="rounded-sm bg-blue-600 text-sm font-semibold px-5 h-9 text-gray-100 hover:bg-blue-700 cursor-pointer flex gap-2 items-center justify-center appearance-none">
+      Xem meme khác</button>
+    </div>
+    <script>
+      console.log('%cCảnh báo', 'color: red; font-size: 50px; font-weight: bold;');
+      console.log('Đây là nơi cấm bạn vào trong. Nếu bạn vào thì sủa. ok. hẹ hẹ hẹ. à mà Meme hay ko bạn');
+      const nextBtn = document.getElementById('nextBtn');
+
+      function getMemeImg() {
+        return document.querySelector('img[alt="🤣😂🤣😂"]');
+      }
+
+      // Xem meme khác
+      nextBtn.onclick = () => {
+        const memeImg = getMemeImg();
+        memeImg.src = "https://api.phimtat.vn/api/random-meme/?" + Date.now();
+      };
+    </script>
+  </div>
+</body>
+</html>
