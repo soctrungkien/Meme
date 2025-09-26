@@ -5,5 +5,5 @@
 
 &nbsp;
 
-[<kbd> <br> Xem meme khác <br> </kbd>](https://github.com/soctrungkien/Meme)
+[<kbd> <br> Xem meme khác <br> </kbd>](https://soctrungkien.github.io/Meme/)
 </div>
